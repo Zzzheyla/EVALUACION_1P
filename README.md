@@ -60,10 +60,6 @@ Se ingresó al repositorio original y se dio clic en "Fork", creando una copia e
 #### ¿Cómo se realizó el clone del fork?
 Se utilizó el comando:
 
-```bash
-git clone https://github.com/Zzzheyla/EVALUACION_1P.git
-
-
 Posteriormente, se utilizó el comando `git clone` para descargar el repositorio fork a mi equipo local, permitiendo trabajar de manera independiente.
 
 Finalmente, se verificó que el repositorio clonado correspondía al fork mediante el comando `git remote -v`, confirmando que la URL remota pertenecía a mi cuenta de GitHub y no al repositorio original.
