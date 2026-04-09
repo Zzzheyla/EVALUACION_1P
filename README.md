@@ -139,8 +139,35 @@ Al ejecutar `git status`, se observa que:
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 3 -->
+### 🔹 Comandos utilizados
 
+bash
+git flow init
+git flow feature start ingresar-encabezado
+git add README.md
+git commit -m "Feature: agregar datos personales al encabezado"
+git commit -m "Feature: ajuste en formato del encabezado"
+git flow feature finish ingresar-encabezado
+git push origin develop
+git push origin main
+
+##🔹 Proceso realizado
+
+Se inicializó Git Flow para estructurar el flujo de trabajo utilizando las ramas main y develop.
+
+Posteriormente, se creó una rama de tipo feature llamada ingresar-encabezado, en la cual se trabajó el desarrollo del encabezado del archivo README.md.
+
+Durante el desarrollo se realizaron commits para registrar los cambios realizados.
+
+Finalmente, se cerró la feature utilizando el comando correspondiente, lo que integró los cambios en la rama develop.
+
+![Fork](images/gitinit.png)
+![Fork](images/gitinit2.png)
+##🔹 Reflexión
+
+El uso de Git Flow permite organizar el trabajo de manera estructurada, separando el desarrollo de nuevas funcionalidades del código estable.
+
+Esto facilita el trabajo en equipo, evita conflictos y permite mantener un control claro sobre las versiones del proyecto, especialmente en proyectos grandes o colaborativos
 ---
 
 ## Pregunta 4 (2 puntos)
