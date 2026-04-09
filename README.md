@@ -87,7 +87,29 @@ Finalmente, se verificó que el repositorio clonado correspondía al fork median
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu explicación y evidencia para la Pregunta 2 -->
+### 🔹 Uso del archivo .gitignore
+
+El archivo `.gitignore` permite definir qué archivos o carpetas no deben ser rastreados por Git.
+
+En este caso se configuró para ignorar:
+- Archivos con extensión `.log`
+- La carpeta `temp/`
+- Archivos `.md` y `.txt` dentro de la carpeta `doc/`
+
+---
+
+### 🔹 Evidencia
+
+Se crearon archivos de prueba dentro y fuera de la carpeta `doc/`, además de un archivo `.log`.
+
+Al ejecutar `git status`, se observa que:
+- Los archivos dentro de `doc/` no son rastreados
+- El archivo `.log` no es rastreado
+- La carpeta `temp/` no es rastreada
+- Solo los archivos fuera de `doc/` son detectados por Git
+
+![Evidencia](images/gitignore.png)
+![Evidencia](images/pruebagiti.png)
 
 ---
 
