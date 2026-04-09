@@ -261,7 +261,67 @@ Enlace: https://github.com/Zzzheyla/EVALUACION_1P/pull/1#issue-4228628149
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 5 -->
+### 🔹 Procedimiento realizado
+
+#### Creación de ramas
+Se crearon dos ramas desde develop:
+- `ramaA`: con archivo `archivoA.txt` conteniendo "Contenido A"
+- `ramaB`: con archivo `archivoA.txt` conteniendo "Contenido B"
+
+Comandos utilizados:
+```bash
+git checkout -b ramaA
+git checkout develop
+git checkout -b ramaB
+```
+
+#### Generación del conflicto
+Se intentó mergear `ramaB` a `ramaA`, lo que generó un conflicto porque ambas ramas crearon el mismo archivo con contenido diferente:
+
+```bash
+git checkout ramaA
+git merge ramaB
+```
+
+Git indicó: `CONFLICT (add/add): Merge conflict in archivoA.txt`
+
+#### Resolución del conflicto
+Se resolvió combinando ambos contenidos en el archivo:
+```bash
+# Contenido final del archivo:
+Contenido A
+Contenido B
+
+git add archivoA.txt
+git commit -m "Resolver conflicto: combinar contenidos A y B"
+```
+
+#### Merge hacia develop
+Se integró `ramaA` a `develop`:
+```bash
+git checkout develop
+git merge ramaA
+```
+
+#### Eliminación de ramas
+Se eliminaron las ramas locales:
+```bash
+git branch -d ramaA ramaB
+```
+
+### 🔹 Qué es un conflicto en Git
+
+Un conflicto en Git ocurre cuando dos ramas modifican el mismo archivo de manera diferente y se intenta mergearlas. Git no puede decidir automáticamente qué cambios mantener, por lo que requiere intervención manual.
+
+En este caso, el conflicto ocurrió porque:
+- `ramaA` creó `archivoA.txt` con "Contenido A"
+- `ramaB` creó el mismo archivo con "Contenido B"
+- Al intentar mergear, Git encontró versiones conflictivas del mismo archivo
+
+Se resolvió combinando ambos contenidos en un único archivo.
+
+### 🔹 Pull Request
+El merge de `develop` hacia `main` se refleja en el PR #1 existente.
 
 ---
 
@@ -287,4 +347,63 @@ Enlace: https://github.com/Zzzheyla/EVALUACION_1P/pull/1#issue-4228628149
 
 **📝 Respuesta:**
 
-<!-- Escribe aquí tu respuesta completa a la Pregunta 6 -->
+### 🔹 Proceso realizado paso a paso
+
+#### Step 1: Limpieza de archivos
+Se eliminaron los archivos creados en preguntas anteriores:
+```bash
+git checkout develop
+rm archivoA.txt
+git add -A
+git commit -m "Limpieza: eliminar archivos temporales de preguntas anteriores"
+```
+
+#### Step 2: Merge desde develop a main
+Se integró todos los cambios de develop hacia main en el repositorio local:
+```bash
+git checkout main
+git merge develop -m "Merge de develop a main: integración de todas las preguntas"
+```
+
+#### Step 3: Envío de cambios al repositorio remoto
+Se enviaron todos los cambios incluyendo los tags creados:
+```bash
+git push origin main --tags
+git push origin develop --tags
+```
+
+#### Step 4: Crear Pull Request final
+Se creó un Pull Request desde la rama `develop` del fork hacia la rama `main` del repositorio original, con el título "Sheyla Eliana Pacha Lucintuña" y descripción con el link del repositorio fork.
+
+### 🔹 Versionamiento Semántico
+
+#### ¿En qué consiste?
+El versionamiento semántico (SemVer) es un sistema de numeración de versiones que comunica de manera clara el tipo de cambios realizados en el software. Sigue el formato **MAJOR.MINOR.PATCH**.
+
+#### Componentes principales
+
+1. **MAJOR** (primera cifra - x.0.0): Se incrementa cuando se hacen cambios incompatibles con versiones anteriores (breaking changes)
+   - Ejemplo: De 1.0.0 a 2.0.0
+
+2. **MINOR** (segunda cifra - 0.x.0): Se incrementa cuando se añaden nuevas funcionalidades compatibles con versiones anteriores
+   - Ejemplo: De 1.0.0 a 1.1.0
+
+3. **PATCH** (tercera cifra - 0.0.x): Se incrementa cuando se corrigen bugs sin afectar la API
+   - Ejemplo: De 1.0.0 a 1.0.1
+
+#### Ejemplo de uso en este proyecto:
+- Versión inicial: `1.0.0`
+- Tras agregar las nuevas funcionalidades: `1.1.0` (MINOR)
+- Tras resolver bugs: `1.1.1` (PATCH)
+- Si hubiera breaking changes: `2.0.0` (MAJOR)
+
+### 🔹 Tags creados
+Se crearon los siguientes 6 tags (uno por cada pregunta):
+1. `Pregunta 1`
+2. `Pregunta 2`
+3. `Pregunta 3`
+4. `Pregunta 4`
+5. `Pregunta 5` (esta pregunta)
+6. `Pregunta 6` (esta pregunta)
+
+Todos fueron enviados al repositorio remoto junto con los cambios.
