@@ -196,36 +196,38 @@ Esto facilita el trabajo en equipo, evita conflictos y permite mantener un contr
 
 **📝 Respuesta:**
 
-### ¿Qué es un Issue?
+### 🔹 ¿Qué es un Pull Request?
 
-Un issue en GitHub es una herramienta utilizada para registrar tareas, errores, mejoras o cualquier aspecto pendiente dentro de un proyecto. Permite organizar el trabajo, asignar responsables y dar seguimiento al progreso.
+Un Pull Request es una solicitud para fusionar cambios de una rama a otra dentro de un repositorio en GitHub.
 
-### ¿Qué es un Pull Request?
+Su función es permitir la revisión de código antes de integrar los cambios, facilitando la colaboración entre desarrolladores.
 
-Un pull request es una solicitud para integrar cambios realizados en una rama hacia otra rama del repositorio. Su finalidad es revisar, discutir y aprobar modificaciones antes de incorporarlas al proyecto principal.
+### 🔹 ¿Por qué es importante revisar un Pull Request?
 
-### Diferencia y relación
+Es importante porque permite detectar errores, mejorar la calidad del código y asegurar que los cambios cumplen con los requisitos antes de integrarse a la rama principal.
 
-La principal diferencia es que el issue describe un problema o tarea, mientras que el pull request contiene la solución a ese problema.
+### 🔹 ¿Qué se revisa en un Pull Request?
 
-Ambos se relacionan en entornos colaborativos, ya que un pull request puede estar vinculado a un issue, permitiendo cerrar automáticamente el issue una vez que los cambios son aprobados e integrados.
+Se revisa la calidad del código, posibles errores, cumplimiento de requerimientos, buenas prácticas y funcionamiento general de los cambios realizados.
 
-### Procedimiento realizado
+### 🔹 Proceso realizado
 
-Se creó un issue en GitHub con el título "Respuesta a la Pregunta 4", con el objetivo de documentar esta sección del examen.
+Se trabajó en la rama develop realizando commits progresivos para responder cada pregunta.
 
-Posteriormente, se trabajó en la rama develop, donde se realizaron los cambios en el archivo README.md para responder la pregunta.
+Se creó un Pull Request hacia la rama main, donde se simularon revisiones mediante comentarios solicitando completar las respuestas.
 
-Se realizó un commit con los cambios y se subieron al repositorio remoto.
+Cada observación fue atendida mediante nuevos commits, los cuales se reflejaron automáticamente en el Pull Request.
 
-Luego, se creó un pull request desde la rama develop hacia main, vinculándolo con el issue mediante la palabra clave "Closes", permitiendo que el issue se cierre automáticamente al realizar el merge.
+Finalmente, el Pull Request fue aprobado y fusionado a la rama principal.
 
-Finalmente, el pull request fue aprobado y fusionado correctamente.
+---
 
-### Evidencia
+### 🔹 Pull Request
 
-Issue: #1  
-Pull Request: #1
+Número del PR: #1
+Enlace: https://github.com/Zzzheyla/EVALUACION_1P/pull/1#issue-4228628149
+
+
 
 ---
 
